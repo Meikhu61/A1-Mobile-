@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A1 MOBILE | Buy, Sell & Exchange Smartphones</title>
+  <meta name="description" content="A1 MOBILE (@a1_mobile_checkon) - Trusted destination to buy, sell, and exchange iPhones and premium smartphones. Open 9:30 AM to 7:30 PM. Call 9612332925." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#09090b',
+            charcoal: '#121216',
+            gold: {
+              300: '#f3d999',
+              400: '#e2bc6b',
+              500: '#d4af37',
+              600: '#b58e24',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Oswald', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f3d999 0%, #d4af37 50%, #b58e24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #e2bc6b 0%, #d4af37 55%, #b58e24 100%);
+    }
+    .glass-card {
+      background: rgba(20, 20, 24, 0.78);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.16);
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-zinc-100 font-sans antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- Top Info Bar -->
+  <div class="bg-zinc-950 border-b border-zinc-800/80 text-xs text-zinc-300 py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i>
+          Open Daily: <strong class="text-white">9:30 AM – 7:30 PM</strong>
+        </span>
+        <span class="hidden sm:flex items-center gap-1.5">
+          <i data-lucide="badge-check" class="w-3.5 h-3.5 text-sky-400"></i>
+          Verified Store <span class="text-zinc-400">@a1_mobile_checkon</span>
+        </span>
+      </div>
+      <a href="tel:9612332925" class="flex items-center gap-1.5 font-medium text-gold-400 hover:text-gold-300 transition">
+        <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+        PH: 9612332925
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-lg border-b border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-black border-2 border-gold-500 flex items-center justify-center shadow-lg shadow-gold-500/10 group-hover:scale-105 transition">
+          <!-- Crown Emblem SVG -->
+          <svg class="w-6 h-6 text-gold-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-display text-2xl font-bold tracking-wider gold-gradient-text">A1 MOBILE</span>
+            <svg class="w-4 h-4 text-sky-400" viewBox="0 0 24 24" fill="currentColor" title="Verified Account">
+              <path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"/>
+            </svg>
+          </div>
+          <p class="text-[11px] text-zinc-400 tracking-wide">@a1_mobile_checkon</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+        <a href="#inventory" class="hover:text-gold-400 transition">Shop Phones</a>
+        <a href="#sell-exchange" class="hover:text-gold-400 transition">Sell & Exchange</a>
+        <a href="#community" class="hover:text-gold-400 transition">60.3K Community</a>
+        <a href="#contact" class="hover:text-gold-400 transition">Visit Store</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20want%20to%20inquire%20about%20a%20phone." target="_blank"
+           class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl gold-gradient-bg text-black font-semibold text-sm hover:brightness-110 transition shadow-lg shadow-gold-500/20">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          WhatsApp Us
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-zinc-800 text-zinc-300 hover:text-gold-400">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-zinc-950 px-4 py-4 space-y-3 text-sm">
+      <a href="#inventory" class="block py-2 text-zinc-200 hover:text-gold-400">Shop Phones</a>
+      <a href="#sell-exchange" class="block py-2 text-zinc-200 hover:text-gold-400">Sell & Exchange</a>
+      <a href="#community" class="block py-2 text-zinc-200 hover:text-gold-400">60.3K Community</a>
+      <a href="#contact" class="block py-2 text-zinc-200 hover:text-gold-400">Visit Store</a>
+      <a href="tel:9612332925" class="block w-full text-center py-2.5 rounded-xl gold-gradient-bg text-black font-semibold">Call 9612332925</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <!-- Subtle Gold Ambient Glow -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gold-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-gold-500/30 text-xs font-medium text-gold-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Trusted by 60.3K+ Followers on Instagram
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] uppercase">
+            Buy, <span class="gold-gradient-text">Sell & Exchange</span><br />
+            Your Phone With Confidence
+          </h1>
+
+          <p class="text-zinc-400 text-base sm:text-lg max-w-xl leading-relaxed">
+            Welcome to <strong class="text-white">A1 MOBILE</strong>. Get unbeatable prices on certified pre-owned iPhones, flagship Androids, instant cash payouts for your old phone, and same-day device upgrades.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#sell-exchange" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm sm:text-base hover:brightness-110 transition shadow-lg shadow-gold-500/20">
+              <i data-lucide="repeat" class="w-5 h-5"></i>
+              Sell / Exchange Phone
+            </a>
+            <a href="#inventory" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-sm sm:text-base hover:border-gold-400 transition">
+              <i data-lucide="smartphone" class="w-5 h-5 text-gold-400"></i>
+              Browse Latest Stock
+            </a>
+          </div>
+
+          <!-- Quick Trust Row -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-800/80 max-w-lg">
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-white">60.3K+</p>
+              <p class="text-xs text-zinc-400">Instagram Followers</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-gold-400">561+</p>
+              <p class="text-xs text-zinc-400">Reels & Deals Shared</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-white">100%</p>
+              <p class="text-xs text-zinc-400">Quality Tested</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 relative shadow-2xl">
+            <div class="absolute -top-4 -right-4 px-4 py-1.5 rounded-full gold-gradient-bg text-black font-bold text-xs tracking-wide shadow-lg">
+              VERIFIED STORE
+            </div>
+
+            <!-- Brand Crest -->
+            <div class="flex flex-col items-center text-center pb-6 border-b border-zinc-800">
+              <div class="w-24 h-24 rounded-full bg-black border-2 border-gold-500 flex flex-col items-center justify-center shadow-xl shadow-gold-500/10 mb-4">
+                <svg class="w-10 h-10 text-gold-400" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                </svg>
+                <span class="font-display text-[11px] font-bold tracking-widest gold-gradient-text mt-0.5">A1 MOBILE</span>
+              </div>
+              <h2 class="font-display text-2xl font-bold tracking-wide text-white flex items-center gap-1.5">
+                @a1_mobile_checkon
+                <svg class="w-5 h-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"/>
+                </svg>
+              </h2>
+              <p class="text-sm text-zinc-400 mt-1">YOU CAN SALE AND EXCHANGE YOUR PHONE</p>
+            </div>
+
+            <!-- Store Quick Details -->
+            <div class="space-y-3.5 pt-6 text-sm">
+              <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span class="flex items-center gap-2.5 text-zinc-300">
+                  <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i> Store Timing
+                </span>
+                <span class="font-semibold text-white">9:30 AM – 7:30 PM</span>
+              </div>
+              <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span class="flex items-center gap-2.5 text-zinc-300">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-gold-400"></i> Direct Helpline
+                </span>
+                <a href="tel:9612332925" class="font-semibold text-gold-400 hover:underline">9612332925</a>
+              </div>
+              <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/90 border border-zinc-800">
+                <span class="flex items-center gap-2.5 text-zinc-300">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-gold-400"></i> Warranty & Bill
+                </span>
+                <span class="font-semibold text-emerald-400">Verified Devices</span>
+              </div>
+            </div>
+
+            <a href="tel:9612332925" class="mt-6 w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-white text-black font-bold text-sm hover:bg-gold-300 transition">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call Now: 9612332925
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Inventory Section -->
+  <section id="inventory" class="py-20 bg-charcoal border-y border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-gold-400 text-xs font-bold uppercase tracking-widest">Hot Arrivals</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase mt-1">Featured Smartphones</h2>
+          <p class="text-zinc-400 text-sm mt-2 max-w-xl">Mint-condition flagship smartphones ready for pickup or exchange. Message us on WhatsApp to reserve yours.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-2" id="filter-buttons">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-gold-500 text-black transition">All Devices</button>
+          <button data-filter="iphone" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-900 border border-zinc-800 text-zinc-300 hover:border-gold-500/50 transition">iPhone</button>
+          <button data-filter="samsung" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-900 border border-zinc-800 text-zinc-300 hover:border-gold-500/50 transition">Samsung</button>
+          <button data-filter="android" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-900 border border-zinc-800 text-zinc-300 hover:border-gold-500/50 transition">OnePlus / Others</button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group hover:border-gold-500/50 transition" data-category="iphone">
+          <div class="relative h-60 bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80" alt="iPhone 15 Pro Max" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 text-gold-400 text-[11px] font-semibold border border-gold-500/30">Mint • 98% Battery</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">iPhone 15 Pro Max</h3>
+                <p class="text-xs text-zinc-400 mt-0.5">256GB • Natural Titanium • Box + Cable</p>
+              </div>
+              <span class="text-gold-400 font-bold text-lg">Best Deal</span>
+            </div>
+            <div class="mt-5 flex items-center gap-2">
+              <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20am%20interested%20in%20the%20iPhone%2015%20Pro%20Max%20(256GB)." target="_blank"
+                 class="flex-1 text-center py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-xs hover:brightness-110 transition">
+                Ask Price on WhatsApp
+              </a>
+              <a href="#sell-exchange" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-zinc-200 hover:border-gold-400 transition">
+                Exchange
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group hover:border-gold-500/50 transition" data-category="iphone">
+          <div class="relative h-60 bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&w=800&q=80" alt="iPhone 14 Pro" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 text-gold-400 text-[11px] font-semibold border border-gold-500/30">Like New • 92% Battery</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">iPhone 14 Pro</h3>
+                <p class="text-xs text-zinc-400 mt-0.5">128GB / 256GB • Deep Purple • All Original</p>
+              </div>
+              <span class="text-gold-400 font-bold text-lg">Hot Deal</span>
+            </div>
+            <div class="mt-5 flex items-center gap-2">
+              <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20am%20interested%20in%20the%20iPhone%2014%20Pro." target="_blank"
+                 class="flex-1 text-center py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-xs hover:brightness-110 transition">
+                Ask Price on WhatsApp
+              </a>
+              <a href="#sell-exchange" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-zinc-200 hover:border-gold-400 transition">
+                Exchange
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group hover:border-gold-500/50 transition" data-category="samsung">
+          <div class="relative h-60 bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80" alt="Samsung Galaxy S24 Ultra" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 text-gold-400 text-[11px] font-semibold border border-gold-500/30">Flagship • 5G</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">Samsung S24 Ultra</h3>
+                <p class="text-xs text-zinc-400 mt-0.5">256GB / 512GB • Titanium • S-Pen Included</p>
+              </div>
+              <span class="text-gold-400 font-bold text-lg">In Stock</span>
+            </div>
+            <div class="mt-5 flex items-center gap-2">
+              <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20am%20interested%20in%20the%20Samsung%20S24%20Ultra." target="_blank"
+                 class="flex-1 text-center py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-xs hover:brightness-110 transition">
+                Ask Price on WhatsApp
+              </a>
+              <a href="#sell-exchange" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-zinc-200 hover:border-gold-400 transition">
+                Exchange
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group hover:border-gold-500/50 transition" data-category="iphone">
+          <div class="relative h-60 bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=800&q=80" alt="iPhone 13" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 text-gold-400 text-[11px] font-semibold border border-gold-500/30">Bestseller</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">iPhone 13 & 13 Pro</h3>
+                <p class="text-xs text-zinc-400 mt-0.5">128GB • Multiple Colors • Seal Pack & Used</p>
+              </div>
+              <span class="text-gold-400 font-bold text-lg">Value Buy</span>
+            </div>
+            <div class="mt-5 flex items-center gap-2">
+              <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20am%20interested%20in%20the%20iPhone%2013." target="_blank"
+                 class="flex-1 text-center py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-xs hover:brightness-110 transition">
+                Ask Price on WhatsApp
+              </a>
+              <a href="#sell-exchange" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-zinc-200 hover:border-gold-400 transition">
+                Exchange
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group hover:border-gold-500/50 transition" data-category="android">
+          <div class="relative h-60 bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80" alt="OnePlus 12 5G" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 text-gold-400 text-[11px] font-semibold border border-gold-500/30">Superfast 5G</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">OnePlus 12 / 12R 5G</h3>
+                <p class="text-xs text-zinc-400 mt-0.5">256GB • Snapdragon • Complete Kit</p>
+              </div>
+              <span class="text-gold-400 font-bold text-lg">In Stock</span>
+            </div>
+            <div class="mt-5 flex items-center gap-2">
+              <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20am%20interested%20in%20the%20OnePlus%2012%205G." target="_blank"
+                 class="flex-1 text-center py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-xs hover:brightness-110 transition">
+                Ask Price on WhatsApp
+              </a>
+              <a href="#sell-exchange" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-zinc-200 hover:border-gold-400 transition">
+                Exchange
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card glass-card rounded-2xl overflow-hidden group hover:border-gold-500/50 transition" data-category="samsung">
+          <div class="relative h-60 bg-zinc-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?auto=format&fit=crop&w=800&q=80" alt="Samsung Z Fold" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/80 text-gold-400 text-[11px] font-semibold border border-gold-500/30">Foldable Series</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">Galaxy Z Fold / Flip</h3>
+                <p class="text-xs text-zinc-400 mt-0.5">256GB / 512GB • Clean Hinge & Display</p>
+              </div>
+              <span class="text-gold-400 font-bold text-lg">Limited</span>
+            </div>
+            <div class="mt-5 flex items-center gap-2">
+              <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE%2C%20I%20am%20interested%20in%20the%20Samsung%20Galaxy%20Z%20Fold%20/%20Flip." target="_blank"
+                 class="flex-1 text-center py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-xs hover:brightness-110 transition">
+                Ask Price on WhatsApp
+              </a>
+              <a href="#sell-exchange" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-zinc-200 hover:border-gold-400 transition">
+                Exchange
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sell & Exchange Interactive Quote Section -->
+  <section id="sell-exchange" class="py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Info Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-gold-400 text-xs font-bold uppercase tracking-widest">Instant Valuation</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase">
+            Sell or Exchange Your Phone in <span class="gold-gradient-text">3 Easy Steps</span>
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+            Want to upgrade to the latest iPhone or get instant cash for your old device? We offer the highest market value with zero hassle.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0 text-gold-400 font-display font-bold">01</div>
+              <div>
+                <h4 class="font-semibold text-white">Share Your Phone Details</h4>
+                <p class="text-xs text-zinc-400 mt-1">Select your brand, model, storage, and condition right here.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0 text-gold-400 font-display font-bold">02</div>
+              <div>
+                <h4 class="font-semibold text-white">Get Best Quote on WhatsApp</h4>
+                <p class="text-xs text-zinc-400 mt-1">Our team gives you an honest, top-value price within minutes.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0 text-gold-400 font-display font-bold">03</div>
+              <div>
+                <h4 class="font-semibold text-white">Instant Cash or Upgrade</h4>
+                <p class="text-xs text-zinc-400 mt-1">Visit us between 9:30 AM – 7:30 PM for spot payment or device swap.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Form Card -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <h3 class="font-display text-2xl font-bold uppercase mb-6 flex items-center gap-2">
+              <i data-lucide="calculator" class="w-6 h-6 text-gold-400"></i>
+              Request Instant Sell / Exchange Quote
+            </h3>
+
+            <form id="trade-form" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-zinc-300 mb-1.5">I Want To</label>
+                  <select id="service-type" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-sm text-white focus:border-gold-400 focus:outline-none">
+                    <option value="Exchange Phone">Exchange for a New Phone</option>
+                    <option value="Sell Phone for Cash">Sell My Phone for Instant Cash</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-zinc-300 mb-1.5">Phone Brand</label>
+                  <select id="phone-brand" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-sm text-white focus:border-gold-400 focus:outline-none">
+                    <option value="Apple iPhone">Apple iPhone</option>
+                    <option value="Samsung">Samsung Galaxy</option>
+                    <option value="OnePlus">OnePlus</option>
+                    <option value="Vivo / Oppo / Xiaomi">Vivo / Oppo / Xiaomi</option>
+                    <option value="Other Brand">Other Brand</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-zinc-300 mb-1.5">Model Name *</label>
+                  <input id="phone-model" type="text" required placeholder="e.g., iPhone 13 Pro, S23 Ultra"
+                         class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-sm text-white placeholder-zinc-500 focus:border-gold-400 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-zinc-300 mb-1.5">Storage & Condition</label>
+                  <select id="phone-condition" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-sm text-white focus:border-gold-400 focus:outline-none">
+                    <option value="Mint Condition (With Box & Bill)">Mint Condition (With Box & Bill)</option>
+                    <option value="Good Condition (No Scratches)">Good Condition (No Scratches)</option>
+                    <option value="Average (Minor Usage Marks)">Average (Minor Usage Marks)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-zinc-300 mb-1.5">Your Name *</label>
+                  <input id="customer-name" type="text" required placeholder="Enter your name"
+                         class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-sm text-white placeholder-zinc-500 focus:border-gold-400 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-zinc-300 mb-1.5">Phone Looking to Buy (If Exchange)</label>
+                  <input id="target-phone" type="text" placeholder="e.g., iPhone 15 Pro (Optional)"
+                         class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-sm text-white placeholder-zinc-500 focus:border-gold-400 focus:outline-none" />
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl gold-gradient-bg text-black font-bold text-sm sm:text-base hover:brightness-110 transition flex items-center justify-center gap-2 shadow-lg shadow-gold-500/20">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Send Details & Get Quote on WhatsApp
+              </button>
+              <p class="text-[11px] text-center text-zinc-400">Directly connects you with A1 MOBILE (PH: 9612332925) on WhatsApp.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community / Instagram Section -->
+  <section id="community" class="py-20 bg-charcoal border-y border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 text-gold-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          @a1_mobile_checkon
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase mt-2">
+          Join Our <span class="gold-gradient-text">60.3K+</span> Strong Community
+        </h2>
+        <p class="text-zinc-400 text-sm mt-2">Daily video reels, unboxings, happy customer handovers, and exclusive flash drops posted every day.</p>
+      </div>
+
+      <!-- Reel / Social Highlights Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-900 border border-zinc-800 group">
+          <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=600&q=80" alt="Customer Delivery Reel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-gold-400 mb-1"><i data-lucide="play-circle" class="w-4 h-4"></i> Reel</span>
+            <p class="text-sm font-semibold text-white">Happy Customer iPhone Handover</p>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-900 border border-zinc-800 group">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Daily Stock Drop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-gold-400 mb-1"><i data-lucide="play-circle" class="w-4 h-4"></i> Reel</span>
+            <p class="text-sm font-semibold text-white">Fresh Flagship Stock Alert</p>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-900 border border-zinc-800 group">
+          <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80" alt="Phone Quality Check" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-gold-400 mb-1"><i data-lucide="play-circle" class="w-4 h-4"></i> Reel</span>
+            <p class="text-sm font-semibold text-white">100% Original Checkon</p>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-zinc-900 border border-zinc-800 group">
+          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=600&q=80" alt="Storefront Showcase" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-gold-400 mb-1"><i data-lucide="play-circle" class="w-4 h-4"></i> Reel</span>
+            <p class="text-sm font-semibold text-white">Best Exchange Offers Daily</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://www.instagram.com/a1_mobile_checkon/" target="_blank"
+           class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-zinc-900 border border-gold-500/40 text-white font-semibold text-sm hover:bg-gold-500 hover:text-black transition">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          Follow @a1_mobile_checkon on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Store Timings Section -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 grid md:grid-cols-3 gap-8 items-center">
+        <div class="space-y-3">
+          <span class="text-gold-400 text-xs font-bold uppercase tracking-widest">Visit or Call Us</span>
+          <h2 class="font-display text-3xl font-bold uppercase">A1 MOBILE Store</h2>
+          <p class="text-zinc-400 text-sm">Walk in for live device demos, spot phone selling, or instant upgrades.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="p-2.5 rounded-xl bg-gold-500/10 text-gold-400"><i data-lucide="clock" class="w-5 h-5"></i></div>
+            <div>
+              <p class="text-xs text-zinc-400">Opening Hours</p>
+              <p class="font-semibold text-white">9:30 AM to 7:30 PM</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="p-2.5 rounded-xl bg-gold-500/10 text-gold-400"><i data-lucide="phone" class="w-5 h-5"></i></div>
+            <div>
+              <p class="text-xs text-zinc-400">Phone / WhatsApp</p>
+              <a href="tel:9612332925" class="font-semibold text-gold-400 hover:underline">+91 9612332925</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <a href="https://wa.me/919612332925" target="_blank" class="w-full py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm text-center hover:brightness-110 transition">
+            Chat on WhatsApp
+          </a>
+          <a href="tel:9612332925" class="w-full py-3.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-sm text-center hover:border-gold-400 transition">
+            Call 9612332925
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 border-t border-zinc-800/80 py-8 px-4 text-center text-xs text-zinc-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-display text-sm tracking-wider text-zinc-300">
+        <span class="gold-gradient-text font-bold">A1 MOBILE</span> • @a1_mobile_checkon
+      </p>
+      <p>Timing: 9:30 AM – 7:30 PM | PH: 9612332925</p>
+      <p>&copy; <span id="year"></span> A1 MOBILE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919612332925?text=Hi%20A1%20MOBILE!" target="_blank" aria-label="Chat on WhatsApp"
+     class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full gold-gradient-bg text-black flex items-center justify-center shadow-2xl shadow-gold-500/30 hover:scale-110 transition">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide icons & footer year
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Inventory Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-gold-500', 'text-black');
+          b.classList.add('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
+        });
+        btn.classList.add('bg-gold-500', 'text-black');
+        btn.classList.remove('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
+
+        const filter = btn.dataset.filter;
+        productCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Sell / Exchange Form -> WhatsApp Redirect
+    document.getElementById('trade-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const service = document.getElementById('service-type').value;
+      const brand = document.getElementById('phone-brand').value;
+      const model = document.getElementById('phone-model').value.trim();
+      const condition = document.getElementById('phone-condition').value;
+      const name = document.getElementById('customer-name').value.trim();
+      const target = document.getElementById('target-phone').value.trim();
+
+      let message = `Hello A1 MOBILE! My name is *${name}*.\n\n` +
+                    `*Request:* ${service}\n` +
+                    `*My Device:* ${brand} - ${model}\n` +
+                    `*Condition:* ${condition}`;
+      if (target) {
+        message += `\n*Looking to Buy:* ${target}`;
+      }
+      message += `\n\nPlease share the best quote!`;
+
+      const whatsappUrl = `https://wa.me/919612332925?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
+</body>
+</html>
